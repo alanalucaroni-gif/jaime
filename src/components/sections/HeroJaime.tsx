@@ -20,8 +20,7 @@ export function HeroJaime() {
       .to("[data-slam='1']", { xPercent: 15 }, 0)
       .to("[data-slam='2']", { xPercent: -10 }, 0)
       .to("[data-hero-fade]", { opacity: .18, y: -55 }, .35)
-      .fromTo("[data-falling-fruit]", { opacity: 0, scale: .3, y: 0, x: 0 }, { opacity: 1, scale: i => [.72,.5,.86,.58,.66][i], y: () => innerHeight * .64, x: i => [-250,-105,15,130,260][i], rotate: i => [-240,190,-160,280,210][i], duration: 1.1, stagger: .07, ease: "power1.in" }, .58)
-      .to("[data-falling-fruit]", { opacity: 0, duration: .2, stagger: .03 }, 1.5);
+      .fromTo("[data-falling-fruit]", { opacity: 0, scale: .3, y: 0, x: 0 }, { opacity: 1, scale: i => [.86,.62,1,.7,.8][i], y: () => innerHeight * 1.18, x: i => [-300,-135,10,155,310][i], rotate: i => [-320,260,-210,360,290][i], duration: 1.45, stagger: .07, ease: "power1.in" }, .55);
   }, { scope: ref });
   return <section ref={ref} className="hero-v2">
     <header data-nav className="nav-v2 shell"><Image src="/images/jaime/logo.png" alt="Jaime Creperia" width={175} height={90} priority /><nav><a href="#experiencia">A experiência</a><a href="#sabores">Sabores</a><a href="#camadas">Ingredientes</a><a className="menu-pill" href={brand.orderUrl}>Pedir agora ↗</a></nav></header>
