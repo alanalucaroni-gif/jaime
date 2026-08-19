@@ -26,7 +26,7 @@
 .savory-feature{position:relative;z-index:3;overflow:hidden}
 .savory-stage{overflow:visible;background:var(--cream);isolation:isolate}
 .savory-stage:before{content:"DORITOS\A + BACON";white-space:pre;position:absolute;inset:7% auto auto 5%;z-index:-1;color:var(--red);font:clamp(70px,8vw,135px)/.73 Impact,sans-serif;letter-spacing:-.04em;opacity:.14}
-.savory-product{position:absolute;z-index:3;left:50%;top:52%;width:min(48vw,690px);aspect-ratio:1;transform:translate(-50%,-50%);filter:drop-shadow(0 30px 24px #011f4150);will-change:transform,opacity}
+.savory-product{position:absolute;z-index:3;left:100%;top:52%;width:min(48vw,690px);aspect-ratio:1;transform:translate(-50%,-50%);filter:drop-shadow(0 30px 24px #011f4150);will-change:transform,opacity}
 .savory-product img{object-fit:contain;transform:none}
 .savory-rain{position:absolute;z-index:12;left:72%;top:27%;width:1px;height:1px;pointer-events:none}
 .doritos-rain,.bacon-rain{position:absolute;opacity:0;will-change:transform}
@@ -36,4 +36,4 @@
 .doritos-0{margin-left:-150px}.doritos-1{margin-left:-100px}.doritos-2{margin-left:-50px}.doritos-4{margin-left:50px}.doritos-5{margin-left:100px}.doritos-6{margin-left:150px}
 .bacon-0{margin-left:-135px}.bacon-1{margin-left:-82px}.bacon-2{margin-left:-28px}.bacon-3{margin-left:28px}.bacon-4{margin-left:82px}.bacon-5{margin-left:135px}
 
-@media(max-width:900px){.savory-stage{min-height:100svh}.savory-product{width:106vw;top:53%}.savory-rain{top:30%}.doritos-rain{width:92px;height:92px;left:-46px;top:-46px}.bacon-rain{width:112px;height:75px;left:-56px;top:-38px}}
+@media(max-width:900px){.savory-stage{min-height:100svh}.savory-product{left:50%;width:106vw;top:53%}.savory-rain{top:30%}.doritos-rain{width:92px;height:92px;left:-46px;top:-46px}.bacon-rain{width:112px;height:75px;left:-56px;top:-38px}}
