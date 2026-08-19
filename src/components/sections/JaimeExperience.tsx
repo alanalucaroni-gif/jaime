@@ -20,10 +20,10 @@ export function JaimeExperience() {
     );
 
     gsap.timeline({ scrollTrigger: { trigger: "[data-savory]", start: "top top", end: "+=1450", pin: true, scrub: .75, anticipatePin: 1 } })
-      .fromTo("[data-savory-product]", { yPercent: 24, scale: .64, rotate: -7, opacity: 0 }, { yPercent: -5, scale: 1, rotate: 0, opacity: 1, duration: .42, ease: "back.out(1.25)" }, 0)
+      .fromTo("[data-savory-product]", { yPercent: 24, scale: .64, rotate: -7, opacity: 0 }, { yPercent: -42, scale: 1, rotate: 0, opacity: 1, duration: .62, ease: "power3.out" }, 0)
       .to("[data-savory-copy]", { opacity: .22, y: -35, duration: .45 }, .28)
-      .fromTo("[data-doritos-rain]", { opacity: 0, y: 0, x: 0, scale: .25 }, { opacity: 1, y: () => innerHeight * 1.22, x: (i) => [-380,-265,-150,-35,95,220,350][i], scale: (i) => [.7,1.05,.82,1.2,.74,1.08,.88][i], rotate: (i) => [-340,280,-210,390,-280,330,-240][i], duration: .92, stagger: .045, ease: "power2.in" }, .38)
-      .fromTo("[data-bacon-rain]", { opacity: 0, y: 0, x: 0, scale: .2 }, { opacity: 1, y: () => innerHeight * 1.17, x: (i) => [-320,-190,-60,80,210,325][i], scale: (i) => [.72,1,.8,1.08,.76,.94][i], rotate: (i) => [260,-320,380,-260,300,-350][i], duration: .86, stagger: .055, ease: "power2.in" }, .44);
+      .fromTo("[data-doritos-rain]", { opacity: 0, y: 0, x: 0, scale: .25 }, { opacity: 1, y: () => innerHeight * .66, x: (i) => [-380,-265,-150,-35,95,220,350][i], scale: (i) => [.7,1.05,.82,1.2,.74,1.08,.88][i], rotate: (i) => [-340,280,-210,390,-280,330,-240][i], duration: .92, stagger: .045, ease: "power2.in" }, .38)
+      .fromTo("[data-bacon-rain]", { opacity: 0, y: 0, x: 0, scale: .2 }, { opacity: 1, y: () => innerHeight * .62, x: (i) => [-320,-190,-60,80,210,325][i], scale: (i) => [.72,1,.8,1.08,.76,.94][i], rotate: (i) => [260,-320,380,-260,300,-350][i], duration: .86, stagger: .055, ease: "power2.in" }, .44);
 
     gsap.timeline({ scrollTrigger: { trigger: "[data-layers]", start: "top top", end: "+=2100", pin: true, scrub: 1 } })
       .to("[data-ring='1']", { y: -190, rotate: -15, scale: 1.05 }, 0)

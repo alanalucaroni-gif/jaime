@@ -23,7 +23,7 @@
 .hero-v2{z-index:2}
 
 /* Savory crepe reveal and ingredient rain */
-.savory-feature{position:relative;z-index:3;overflow:visible}
+.savory-feature{position:relative;z-index:3;overflow:hidden}
 .savory-stage{overflow:visible;background:var(--cream);isolation:isolate}
 .savory-stage:before{content:"DORITOS\A + BACON";white-space:pre;position:absolute;inset:7% auto auto 5%;z-index:-1;color:var(--red);font:clamp(70px,8vw,135px)/.73 Impact,sans-serif;letter-spacing:-.04em;opacity:.14}
 .savory-product{position:absolute;z-index:3;left:50%;top:52%;width:min(48vw,690px);aspect-ratio:1;transform:translate(-50%,-50%);filter:drop-shadow(0 30px 24px #011f4150);will-change:transform,opacity}
