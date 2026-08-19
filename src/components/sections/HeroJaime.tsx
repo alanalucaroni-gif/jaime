@@ -15,7 +15,7 @@ export function HeroJaime() {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     gsap.timeline({ delay: 2.15 }).from("[data-nav]", { y: -50, opacity: 0, duration: .7 }).from("[data-slam]", { yPercent: 130, rotate: i => i % 2 ? 5 : -5, skewY: 7, stagger: .065, duration: .78, ease: "power4.out" }, .12).from("[data-product]", { y: 220, scale: .58, rotate: -12, opacity: 0, duration: 1.1, ease: "back.out(1.35)" }, .38).from("[data-hero-meta]", { y: 30, opacity: 0, duration: .6 }, .85);
     const scroll = gsap.timeline({ scrollTrigger: { trigger: ref.current, start: "top top", end: "+=1800", pin: true, scrub: 1, anticipatePin: 1 } });
-    scroll.to("[data-product]", { yPercent: -28, scale: 1, rotate: 180, transformOrigin: "50% 55%", duration: 1.05, ease: "power2.inOut" }, 0)
+    scroll.to("[data-product]", { yPercent: -60, rotate: 180, transformOrigin: "50% 55%", duration: 1.05, ease: "power2.inOut" }, 0)
       .to("[data-slam='0']", { xPercent: -18 }, 0)
       .to("[data-slam='1']", { xPercent: 15 }, 0)
       .to("[data-slam='2']", { xPercent: -10 }, 0)
