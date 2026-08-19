@@ -28,7 +28,7 @@ export function HeroJaime() {
     <div data-hero-fade className="hero-title shell"><p>Crêpes généreuses · depuis toujours</p><h1>{["UMA OBRA", "EM CADA", "CREPE"].map((w,i)=><span key={w}><i data-slam={i}>{w}</i></span>)}</h1></div>
     <div data-product className="campaign-product"><Image src="/images/jaime/hero-full-cone-transparent-v4.png" alt="Crepe doce artesanal da Jaime com morangos e chocolate" fill priority sizes="(max-width: 768px) 90vw, 650px" /></div>
     <div className="falling-fruits" aria-hidden="true">{Array.from({ length: 5 }).map((_, index) => <span data-falling-fruit key={`fruit-${index}`} className={`falling-fruit fruit-${index}`}><Image src="/images/jaime/strawberry-transparent-v1.png" alt="" fill sizes="140px" /></span>)}{Array.from({ length: 3 }).map((_, index) => <span data-falling-cookie key={`cookie-${index}`} className={`falling-cookie cookie-${index}`}><Image src="/images/jaime/cookie-transparent-v1.png" alt="" fill sizes="160px" /></span>)}</div>
-    <footer data-hero-meta className="hero-meta shell"><p>Da massa ao último toque,<br/>cada detalhe importa.</p><div className="hero-stamp">C'EST<br/><strong>MAGNIFIQUE</strong></div><a href={brand.orderUrl}>EXPLORAR CARDÁPIO <b>↘</b></a></footer>
+    <footer data-hero-meta className="hero-meta shell"><p>Da massa ao último toque,<br/>cada detalhe importa.</p><div className="hero-stamp">C&apos;EST<br/><strong>MAGNIFIQUE</strong></div><a href={brand.orderUrl}>EXPLORAR CARDÁPIO <b>↘</b></a></footer>
     <div className="hero-marquee"><span>CREPES DOCES · CREPES SALGADOS · MONTE O SEU · CREPES DOCES · CREPES SALGADOS · MONTE O SEU · </span></div>
   </section>;
 }
