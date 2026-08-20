@@ -37,3 +37,15 @@
 .bacon-0{margin-left:-135px}.bacon-1{margin-left:-82px}.bacon-2{margin-left:-28px}.bacon-3{margin-left:28px}.bacon-4{margin-left:82px}.bacon-5{margin-left:135px}
 
 @media(max-width:900px){.savory-stage{min-height:100svh}.savory-product{left:50%;width:90vw;top:43%}.savory-rain{left:66%;top:16%}.doritos-rain{width:92px;height:92px;left:-46px;top:-46px}.bacon-rain{width:112px;height:75px;left:-56px;top:-38px}}
+
+/* Macro food-commercial shot: locked-off frame, flat chroma-key green, only the cream and sauce move. */
+.macro-shot{position:relative;z-index:1;display:grid;place-items:center;min-height:100svh;background:#00b140;overflow:hidden}
+.macro-stage{position:relative;width:min(98vw,98svh,1180px);aspect-ratio:1}
+.macro-crepe,.macro-cream{position:absolute;inset:0}
+.macro-crepe img,.macro-cream img{object-fit:contain}
+.macro-cream{filter:url(#macroMelt);transform-origin:63% 30%;will-change:transform;-webkit-mask-image:radial-gradient(ellipse 24% 11% at 63% 19%,#000 0 55%,transparent 100%);mask-image:radial-gradient(ellipse 24% 11% at 63% 19%,#000 0 55%,transparent 100%)}
+.macro-layer{position:absolute;inset:0;width:100%;height:100%}
+.macro-sauce{overflow:visible}
+[data-macro-drop] ellipse{transform-box:fill-box;transform-origin:50% 15%}
+[data-macro-tip]{transform-box:fill-box;transform-origin:50% 5%}
+@media(max-width:900px){.macro-shot{min-height:84svh}.macro-stage{width:min(100vw,78svh)}}
