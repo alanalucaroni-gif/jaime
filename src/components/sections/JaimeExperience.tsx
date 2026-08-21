@@ -19,45 +19,41 @@ export function JaimeExperience() {
       gsap.from(el, { y: 90, opacity: 0, duration: .9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 82%" } })
     );
 
-    gsap.timeline({ scrollTrigger: { trigger: "[data-savory]", start: "top top", end: "+=1450", pin: true, scrub: .75, anticipatePin: 1 } })
-      .fromTo("[data-savory-product]", { yPercent: 24, scale: .64, rotate: 0, opacity: 0 }, { yPercent: -4, scale: 1, rotate: 0, opacity: 1, duration: .34, ease: "back.out(1.25)" }, 0)
-      .to("[data-savory-product]", { rotate: 12, transformOrigin: "50% 50%", duration: .2, ease: "power2.inOut" }, .34)
-      .to("[data-savory-product]", { rotate: 8, duration: .055, ease: "power2.inOut" }, .54)
-      .to("[data-savory-product]", { rotate: 14, duration: .055, ease: "power2.inOut" }, .595)
-      .to("[data-savory-product]", { rotate: 12, duration: .075, ease: "power2.out" }, .64)
-      .to("[data-savory-copy]", { opacity: .22, y: -35, duration: .45 }, .38)
-      .fromTo("[data-doritos-rain]", { opacity: 0, y: 0, x: 0, scale: .25 }, { opacity: 1, y: () => innerHeight * .57, x: (i) => innerWidth * [.18,.24,.3,.36,.42,.48,.54][i], scale: (i) => [.7,1.05,.82,1.2,.74,1.08,.88][i], rotate: (i) => [-340,280,-210,390,-280,330,-240][i], duration: .78, stagger: .045, ease: "power2.in" }, .66)
-      .fromTo("[data-bacon-rain]", { opacity: 0, y: 0, x: 0, scale: .2 }, { opacity: 1, y: () => innerHeight * .54, x: (i) => innerWidth * [.21,.28,.35,.42,.49,.56][i], scale: (i) => [.72,1,.8,1.08,.76,.94][i], rotate: (i) => [260,-320,380,-260,300,-350][i], duration: .74, stagger: .055, ease: "power2.in" }, .7)
-      .to("[data-doritos-rain], [data-bacon-rain]", { opacity: 0, duration: .16, ease: "power1.out" }, 1.28);
+    gsap.timeline({ scrollTrigger: { trigger: "[data-personalities]", start: "top top", end: "+=1250", pin: true, scrub: .85, anticipatePin: 1 } })
+      .set("[data-sweet-product], [data-sweet-ingredient]", { opacity: 0 }, 0)
+      .to("[data-sweet-product], [data-sweet-ingredient]", { opacity: 1, duration: .025 }, .02)
+      .to("[data-sweet-product]", { xPercent: -18, yPercent: -10, rotate: -12, scale: .72, opacity: 0, duration: .3, ease: "power2.in" }, .12)
+      .to("[data-sweet-ingredient]", { x: (index) => [-150, 125, -90][index], y: (index) => [-160, -120, 150][index], rotate: (index) => [-90, 110, -70][index], scale: .35, opacity: 0, stagger: .035, duration: .28 }, .14)
+      .to("[data-personality-sweet]", { y: -25, opacity: 0, duration: .2 }, .2)
+      .to("[data-personality-bg]", { backgroundColor: "#f23f46", duration: .3 }, .27)
+      .fromTo("[data-savory-product-card]", { xPercent: 24, yPercent: 18, rotate: 12, scale: .62, opacity: 0 }, { xPercent: 0, yPercent: 0, rotate: 0, scale: 1, opacity: 1, duration: .42, ease: "back.out(1.35)" }, .34)
+      .fromTo("[data-savory-ingredient]", { y: -130, rotate: -80, scale: .25, opacity: 0 }, { y: 0, rotate: 0, scale: 1, opacity: 1, stagger: .055, duration: .35, ease: "back.out(1.7)" }, .42)
+      .fromTo("[data-personality-savory]", { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: .24 }, .5)
+      .to("[data-savory-product-card]", { yPercent: 80, rotate: 5, scale: .72, opacity: 0, duration: .22, ease: "power2.in" }, .88)
+      .to("[data-savory-ingredient], [data-personality-savory]", { y: 70, opacity: 0, duration: .16 }, .9);
+
+    gsap.timeline({ scrollTrigger: { trigger: "[data-savory]", start: "top top", end: "+=1100", pin: true, scrub: .8, anticipatePin: 1 } })
+      .fromTo("[data-savory-product]", { yPercent: -80, scale: .72, rotate: 5, opacity: 0 }, { yPercent: -3, scale: 1, rotate: 0, opacity: 1, duration: .55, ease: "power3.out" })
+      .from("[data-feature-note]", { opacity: 0, x: (index) => index % 2 ? 50 : -50, stagger: .08, duration: .35 }, .25)
+      .to("[data-savory-product]", { scale: 1.08, yPercent: -8, duration: .45 }, .55);
 
     gsap.timeline({ scrollTrigger: { trigger: "[data-layers]", start: "top top", end: "+=2100", pin: true, scrub: 1 } })
-      .to("[data-ring='1']", { y: -190, rotate: -15, scale: 1.05 }, 0)
-      .to("[data-ring='2']", { y: -70, x: 130, rotate: 12 }, 0)
-      .to("[data-ring='3']", { y: 85, x: -120, rotate: -10 }, 0)
-      .to("[data-ring='4']", { y: 210, rotate: 13, scale: .95 }, 0)
-      .from("[data-layer-copy]", { opacity: 0, x: (i) => i % 2 ? 50 : -50, stagger: .12 }, .25)
+      .to("[data-ring='1']", { y: -180, rotate: -4, scale: 1.04 }, 0)
+      .to("[data-ring='2']", { y: -60, rotate: 3 }, 0)
+      .to("[data-ring='3']", { y: 85, rotate: -3 }, 0)
+      .from("[data-layer-copy]", { opacity: 0, x: (index) => index % 2 ? 50 : -50, stagger: .12 }, .25)
       .to("[data-layer-title]", { scale: .82, opacity: .16 }, 0);
   }, { scope: ref });
 
   return <div ref={ref}>
-    <section id="experiencia" className="manifesto"><div className="shell"><p data-reveal className="section-label">TOP CLASSIC · JAIME CREPERIA</p><h2 data-reveal>FININHO POR FORA.<span>ABSURDO POR DENTRO.</span></h2><div className="manifesto-grid"><p data-reveal>Na Jaime, cada crepe nasce na hora. Massa leve, recheio sem economia e combinações que transformam fome em desejo.</p><a data-reveal href={brand.orderUrl}>PEDIR AGORA ↗</a></div></div><div className="type-ribbon"><span>DOCE · SALGADO · CROCANTE · CREMOSO · DOCE · SALGADO · CROCANTE · CREMOSO · </span></div></section>
+    <section id="experiencia" data-personalities className="story-manifesto story-personalities"><div className="shell story-manifesto-grid"><div className="story-manifesto-copy"><i/><p>DUAS PERSONALIDADES · UMA J&apos;AIME</p><h2>DOCE NO DESEJO.<br/><span>SALGADO NA ATITUDE.</span></h2><p>Do morango com chocolate ao bacon com Doritos: escolha seu humor e deixe a J&apos;aime transformar em crepe.</p><a href={brand.orderUrl}>QUAL É A SUA HOJE? ↗</a></div><div data-personality-bg className="personality-stage"><div data-personality-sweet className="personality-label label-sweet"><small>01 · DOUCE</small><strong>DOCE</strong></div><div data-personality-savory className="personality-label label-savory"><small>02 · SALÉE</small><strong>SALGADO</strong></div><div data-sweet-product className="personality-product sweet-personality"><Image src="/images/jaime/hero-full-cone-transparent-v4.png" alt="Crepe doce J'aime" fill sizes="(max-width:900px) 90vw, 45vw" /></div><div data-savory-product-card className="personality-product savory-personality"><Image src="/images/jaime/savory-crepe-transparent-v1.png" alt="Crepe salgado J'aime" fill sizes="(max-width:900px) 90vw, 45vw" /></div><div className="personality-ingredients" aria-hidden="true"><span data-sweet-ingredient className="personality-sprite sweet-sprite-a"><Image src="/images/jaime/strawberry-transparent-v1.png" alt="" fill sizes="100px"/></span><span data-sweet-ingredient className="personality-sprite sweet-sprite-b"><Image src="/images/jaime/cookie-transparent-v1.png" alt="" fill sizes="110px"/></span><span data-sweet-ingredient className="personality-dot sweet-dot"/><span data-savory-ingredient className="personality-sprite savory-sprite-a"><Image src="/images/jaime/doritos-sprite-v1.png" alt="" fill sizes="110px"/></span><span data-savory-ingredient className="personality-sprite savory-sprite-b"><Image src="/images/jaime/bacon-sprite-v1.png" alt="" fill sizes="120px"/></span><span data-savory-ingredient className="personality-dot savory-dot"/></div></div></div></section>
 
-    <section data-savory className="feature-split savory-feature">
-      <div className="feature-photo savory-stage">
-        <div data-savory-product className="savory-product"><Image src="/images/jaime/savory-crepe-transparent-v1.png" alt="Crepe salgado da Jaime com Doritos e bacon" fill priority sizes="(max-width: 900px) 92vw, 50vw" /></div>
-        <div className="savory-rain" aria-hidden="true">
-          {Array.from({ length: 7 }).map((_, index) => <span data-doritos-rain key={`doritos-${index}`} className={`doritos-rain doritos-${index}`}><Image src="/images/jaime/doritos-sprite-v1.png" alt="" fill sizes="130px" /></span>)}
-          {Array.from({ length: 6 }).map((_, index) => <span data-bacon-rain key={`bacon-${index}`} className={`bacon-rain bacon-${index}`}><Image src="/images/jaime/bacon-sprite-v1.png" alt="" fill sizes="150px" /></span>)}
-        </div>
-      </div>
-      <div data-savory-copy className="feature-copy"><p className="section-label">EXPERIENCE</p><h2>COMIDA QUE<br/><span>MUDA O HUMOR.</span></h2><div className="feature-stats"><div><b>01</b><p>Massa preparada para ficar leve e crocante.</p></div><div><b>02</b><p>Recheios generosos do começo ao fim.</p></div><div><b>03</b><p>Combinações clássicas ou totalmente suas.</p></div></div></div>
-    </section>
+    <section data-savory className="story-feature"><p className="story-feature-kicker">EXPERIÊNCIA</p><h2>COMIDA QUE<br/>MUDA O HUMOR.</h2><div data-savory-product className="story-feature-product"><Image src="/images/jaime/savory-crepe-transparent-v1.png" alt="Crepe salgado com Doritos e bacon" fill sizes="(max-width:900px) 92vw, 55vw" /></div><div className="story-feature-notes"><p data-feature-note>INGREDIENTES<br/><strong>SELECIONADOS</strong></p><p data-feature-note>COMBINAÇÕES<br/><strong>AUTORAIS</strong></p><p data-feature-note>MASSA FINA<br/><strong>E LEVE</strong></p><p data-feature-note>FEITO NA HORA.<br/><strong>SEMPRE.</strong></p></div></section>
 
-    <section id="camadas" data-layers className="layers"><div className="layers-head"><p>PURE QUALITY</p><h2 data-layer-title>CADA CAMADA<br/><span>CONTA UMA HISTÓRIA</span></h2></div><div className="crepe-stack"><div data-ring="1" className="stack-ring ring-candy">CONFETE</div><div data-ring="2" className="stack-ring ring-chocolate">CHOCOLATE</div><div data-ring="3" className="stack-ring ring-fruit">MORANGO</div><div data-ring="4" className="stack-ring ring-dough">MASSA</div></div><div className="layer-notes"><p data-layer-copy>01 — cores que chegam primeiro</p><p data-layer-copy>02 — cremosidade que segura tudo</p><p data-layer-copy>03 — frescor no meio da intensidade</p><p data-layer-copy>04 — a base fina que vira assinatura</p></div></section>
-    <section className="story"><div className="shell"><p data-reveal className="section-label">A STORY IN EVERY BITE</p><h2 data-reveal>DO PRIMEIRO<br/>OLHAR AO<br/><span>ÚLTIMO PEDAÇO.</span></h2><div className="story-cards"><article data-reveal><span>PARIS?</span><h3>QUASE.</h3><p>O charme é francês. A generosidade é toda Jaime.</p></article><article data-reveal><span>SEU JEITO</span><h3>MONTE.</h3><p>Escolha massa, recheios e finalizações.</p></article><article data-reveal><span>SEM ESPERA</span><h3>PEÇA.</h3><p>Seu próximo crepe está a poucos cliques.</p></article></div></div></section>
+    <section id="camadas" data-layers className="story-layers"><div className="story-layers-copy"><p>PURE QUALITY</p><h2 data-layer-title>CADA CAMADA<br/>CONTA UMA<br/><span>HISTÓRIA</span></h2></div><div className="story-stack"><div data-ring="1" className="real-layer layer-chocolate">CHOCOLATE</div><div data-ring="2" className="real-layer layer-strawberry"><Image src="/images/jaime/strawberry-transparent-v1.png" alt="" width={100} height={100}/><Image src="/images/jaime/strawberry-transparent-v1.png" alt="" width={90} height={90}/><Image src="/images/jaime/strawberry-transparent-v1.png" alt="" width={105} height={105}/></div><div data-ring="3" className="real-layer layer-cream">CREME</div></div><div className="story-layer-notes"><p data-layer-copy>COBERTURAS IRRESISTÍVEIS</p><p data-layer-copy>FRUTAS FRESCAS</p><p data-layer-copy>CREMES INCRÍVEIS</p></div></section>
   </div>;
 }
 
 export function JaimeFinal() {
-  return <section className="final-v2"><div className="final-bg"><Image src="/images/jaime/hero-campaign-v2.png" alt="" fill sizes="100vw" /></div><div className="final-overlay"/><div className="final-type"><span>FEEL THE CRÊPE · FEEL THE CRÊPE ·</span><i>JAIME · JAIME · JAIME ·</i></div><div className="final-content"><p>FAIT AVEC AMOUR</p><h2>JÁ ESCOLHEU<br/><span>SUA OBRA?</span></h2><a href={brand.orderUrl}>PEDIR MEU<br/>CREPE ↗</a></div></section>;
+  return <section className="story-final"><div className="story-final-copy"><p>FAIT AVEC AMOUR</p><h2>VÁ DE J&apos;AIME.<br/>VÁ DE CREPE.</h2><a href={brand.orderUrl}>PEDIR AGORA <b>↗</b></a></div><div className="story-final-photo"><Image src="/images/jaime/hero-campaign-v2.png" alt="Crepe doce J'aime" fill sizes="(max-width:800px) 100vw, 50vw" /></div></section>;
 }
