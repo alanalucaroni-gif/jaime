@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Escolha entre crepes salgados, doces ou monte sua própria obra J'aime.",
 };
 
-export default function CrepesPage() {
+export default function CrepePage() {
   return <CrepesShop />;
 }

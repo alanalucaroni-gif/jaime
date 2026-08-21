@@ -42,7 +42,7 @@ export function HeroJaime() {
   }, { scope: ref });
 
   return <section ref={ref} id="top" className="story-hero">
-    <header data-nav className="story-nav shell"><a href="#top" aria-label="J'aime — início"><Image src="/images/jaime/logo.png" alt="J'aime Crêpe Française" width={185} height={96} priority /></a><nav><a href="/crepes" target="_blank" rel="noreferrer">Crepes ↗</a><a href="#experiencia">Experiência</a><a href="#camadas">Ingredientes</a><a className="story-order" href={brand.orderUrl}>Pedir agora <b>↗</b></a></nav></header>
+    <header data-nav className="story-nav shell"><a href="#top" aria-label="J'aime — início"><Image src="/images/jaime/logo.png" alt="J'aime Crêpe Française" width={185} height={96} priority /></a><nav><a href="/crepes">Peça seu crepe ↗</a><a href="#experiencia">Experiência</a><a href="#camadas">Ingredientes</a><a className="story-order" href={brand.orderUrl}>Pedir agora <b>↗</b></a></nav></header>
     <div className="story-hero-copy shell"><p>Crêpes généreuses · depuis toujours</p><h1>{["UMA OBRA", "EM CADA", "CREPE"].map((word, index) => <span key={word}><i data-slam={index}>{word}</i></span>)}</h1></div>
     <div data-product className="story-hero-product"><Image src="/images/jaime/hero-full-cone-transparent-v4.png" alt="Crepe doce artesanal J'aime" fill priority sizes="(max-width: 800px) 100vw, 58vw" /></div>
     <div data-hero-meta className="story-hero-side"><div className="story-seal">FAIT AVEC<br/><strong>AMOUR</strong></div><a href="#experiencia">ROLE PARA EXPLORAR <b>↓</b></a></div>
