@@ -4,8 +4,7 @@ export const brand = {
   tagline: "Uma obra em cada crepe.",
   description:
     "Crepes artesanais, doces e salgados, preparados para transformar cada pedido em uma experiência magnifique.",
-  orderUrl:
-    "https://jaimecreperia.deeliv.app/webapp/globais/cardapio/TO9ZWQ",
+  orderUrl: "/crepes#cardapio",
   colors: {
     navy: "#011F41",
     blue: "#002B54",
@@ -15,3 +14,4 @@ export const brand = {
     green: "#00A808",
   },
 } as const;
+
