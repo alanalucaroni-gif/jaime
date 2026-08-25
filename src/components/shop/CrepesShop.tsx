@@ -80,7 +80,16 @@ export function CrepesShop() {
 
   return <main className="shop-page">
     <nav className="shop-nav shell"><Link href="/" aria-label="Voltar para o início"><Image src="/images/jaime/logo.png" alt="J'aime" width={170} height={90} priority /></Link><div><Link href="/">Início</Link><Link className="shop-pill" href={brand.orderUrl}>Pedir agora ↗</Link></div></nav>
-    <section className="shop-hero"><div className="shop-hero-bg"><Image src="/images/jaime/hero-campaign-v2.png" alt="Crepe J'aime" fill priority sizes="100vw" /></div><div className="shop-hero-overlay" /><p className="shop-hero-kicker">TRÊS ETAPAS · UMA OBRA</p><h1><span>PEÇA SEU</span><span>CREPE.</span></h1><div className="shop-hero-product"><Image src="/images/jaime/hero-full-cone-transparent-v4.png" alt="Crepe doce J'aime" fill priority sizes="60vw" /></div><svg viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70c250 110 420-50 690 22 270 72 480-70 750 12v76H0Z" /></svg></section>
+    <section className="shop-hero shop-hero-intro" aria-labelledby="shop-hero-title">
+      <div className="shop-hero-copy">
+        <h1 id="shop-hero-title">UM CREPE.<br /><em>UMA OBRA</em><br />SÓ SUA.</h1>
+        <p>Escolha sabores, combine ingredientes e peça do seu jeito.</p>
+        <Link href="#cardapio">COMEÇAR PEDIDO <span aria-hidden="true">↓</span></Link>
+      </div>
+      <div className="shop-hero-visual" aria-hidden="true">
+        <video src="/images/jaime/jaime.mp4" autoPlay muted loop playsInline preload="metadata" />
+      </div>
+    </section>
 
     <section className="shop-journey" id="cardapio">
       <header className="shell shop-menu-title"><div><p>LE MENU</p><h2>ESCOLHA<br />SEU CAMINHO</h2></div><span>3 etapas</span></header>
